@@ -1,4 +1,4 @@
-#color dictionary
+#Starter code for color dictionary
 # December 21, 2012 - Mayan Calendar ended and the world should have to
 #Hey we are still arround :)
 # Color Dictionary
@@ -28,24 +28,34 @@ colors = {"Red": (255,0,0),
 answer ="y"
 while answer != "n":
     #Ask the user for a color
-    color = input("\nWhat color are you looking for?").title()
-    print(colors.get(color))
+    Acolor = input("\nWhat color are you looking for?")
+    Acolor = Acolor.title()
+
+    print(colors.get(Acolor))
+
 
     # Display the R G B values if it is in the list
-    print(colors.get(color, "I do not know those"),"R G B values for ", color,"\n")
+    print(colors.get(Acolor, "I do not know those"),"R G B values for ", Acolor,"\n")
+
+
 
     # If the Color is NOT in the list ask for the R G B values
     # add it to the dictionary of Colors
-    answer = input("Would you like to add "+color+" to the list of colors?")
+    answer = input("Would you like to add "+Acolor+" to the list of colors?")
 
-    if answer.lower() in ("y","yes","yea","yeah","yep"):
+    if answer.lower() in ("y","yes","yea","you bet ya","of course"):
         r = input("Red Value")
         g = input("Green Value")
         b = input("Blue Value")
 
-        colors[color] = (int(r),int(g),int(b))
+        colors[Acolor] = (int(r),int(g),int(b))
         
-    answer = input("Whould you like to look up another color? (y or n) ")        
+    answer = input("Whould you like to look up another color?")
+
+
+        
+    # Ask the user if they need to look up more colors
+
 
 #Display the entire dictionary in 2 columns
 #Color Key      R G B values
