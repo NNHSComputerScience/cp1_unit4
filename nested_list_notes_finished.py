@@ -68,15 +68,22 @@ print("\nTry changing the first ford to an audi and then display it: ")
 lot[0][0] = "audi"
 print(lot[0][0]) 
 
-input("\nPress Enter to Continue...")
+input("\nPress Enter to Continue...")  
 
 # Using nested for loops to display the individual elements in row / column format
 print("\nPrint the lot in row / column format with a single tab in between each car. \nAlso, display row and column headings accordingly, without hardcoding:")
+
+for row in lot:  # nested loop
+    for car in row:
+        print(f"{car}  \t", end="")
+    print()
+
+# column labels
 for col in range(len(lot[0])):
     print("\tcolumn", col+1, end="")
 print()
 for row in range(len(lot)):
-    print("row", row+1, "\t", end="")
+    print("row", row+1, "\t", end="") # row labels
     for col in range(len(lot[row])): 
         print (lot[row][col], end="\t\t")
     print()
